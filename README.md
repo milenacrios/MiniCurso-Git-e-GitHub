@@ -73,7 +73,7 @@ Repositório criado a fim de expor os conteúdos ministrados no minicurso de Int
   #### Mas afinal, o que é GitHub?
   * GitHub é uma plataforma que possibilita a **hospedagem** de arquivos usando o controle de versionamento de arquivos do **git**. É um dos mais famosos **repositórios remotos** existentes, permitindo que você descarregue seus **repositórios locais** de forma **pública**, onde toda a comunidade tem acesso e de forma **privada**, somente você e os colaboradores possuem acesso. Além disso, o **GitHub** vem sendo muito utilizando como **portfólio**, muitos recutradores querem ver o que você anda desenvolvendo, como você desenvolve e normalmente o **GitHub** sempre é solicitado. Ele serve basicamente como uma **_"rede social"_**, uma vez que você expõe sua vida em projetos hahaha e todo mundo pode colaborar! É uma ótima comunidade! E você deve-se recordar daquela primeira imagem que mostramos aqui, o github é o repositório remoto! 
   
-    ![Captura de tela de 2022-10-16 19-00-28](https://user-images.githubusercontent.com/64020657/196060317-89f0c370-04f8-4208-a510-5399cf9ba726.png)
+   ![Captura de tela de 2022-10-16 19-00-28](https://user-images.githubusercontent.com/64020657/196060317-89f0c370-04f8-4208-a510-5399cf9ba726.png)
     
   * Agora que já sabemos o que é **GitHub**, vamos criar nosso primeiro **reoisitório remoto** e **clonar** para nossa máquina!
   
