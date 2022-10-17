@@ -176,12 +176,13 @@ Repositório criado a fim de expor os conteúdos ministrados no minicurso de Int
  #### Mas então, como criamos uma branch? Como criar a branch _formulário_?
   * Nós podemos criar uma branch de duas maneiras:
     * A primeira, usando o seguinte comando: 
-     * **_git branch <nome da branch>_** -> para a branch formulário, temos: **_git branch formulário_**
+     * **git branch <nome da branch>** : para a branch formulário, temos: **_git branch formulário_**
      * Nesse caso, ele apenas cria a branch sem dar **checkout** nela, ou seja, sem mudar da **branch anterior** para a nova criada. Para mudar de ramo, use o comando: 
-        * **_git checkout <nome da branch>
+        * **git checkout <nome da branch>**
     * A segunda, usando o comando:
-     * **_git checkout -b <nome da branch>
+     * **git checkout -b <nome da branch>**
      * Se você estiver na branch main, e criar a nova branch **formulário** com o checkout, automaticamente, você sai da branch **main** e muda para a branch **formulário**. Você pode verificar isso com o comando **_git status_** e poderá verificar a lista de branchs da sua árvore de trabalho, com o comando:
        * **_git branch_**
   * Para criar a branch formulário, eu fiz dessa forma:
-    
+  
+     ![Captura de tela de 2022-10-17 16-21-56](https://user-images.githubusercontent.com/64020657/196264301-4a9d6463-d20c-475f-b231-d8be41c526cd.png)
