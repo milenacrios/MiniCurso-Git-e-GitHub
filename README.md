@@ -176,13 +176,31 @@ Repositório criado a fim de expor os conteúdos ministrados no minicurso de Int
  #### Mas então, como criamos uma branch? Como criar a branch _formulário_?
   * Nós podemos criar uma branch de duas maneiras:
     * A primeira, usando o seguinte comando: 
-     * **git branch <nome da branch>** : para a branch formulário, temos: **_git branch formulário_**
+     * **git branch >nome da branch<** : para a branch formulário, temos: **_git branch formulário_**
      * Nesse caso, ele apenas cria a branch sem dar **checkout** nela, ou seja, sem mudar da **branch anterior** para a nova criada. Para mudar de ramo, use o comando: 
-        * **git checkout <nome da branch>**
+      * **git checkout >nome da branch<**
+      
     * A segunda, usando o comando:
-     * **git checkout -b <nome da branch>**
+     * **git checkout -b >nome da branch<**
      * Se você estiver na branch main, e criar a nova branch **formulário** com o checkout, automaticamente, você sai da branch **main** e muda para a branch **formulário**. Você pode verificar isso com o comando **_git status_** e poderá verificar a lista de branchs da sua árvore de trabalho, com o comando:
-       * **_git branch_**
+     * **_git branch_**
   * Para criar a branch formulário, eu fiz dessa forma:
   
      ![Captura de tela de 2022-10-17 16-21-56](https://user-images.githubusercontent.com/64020657/196264301-4a9d6463-d20c-475f-b231-d8be41c526cd.png)
+  
+### Add, commit e push na nova branch
+ * Já fizemos isso na branch principal e como fazemos na branch nova que acabamos de criar? É simples, basta especificar o nome da branch na hora do **push**
+    * **_git add ._**
+    * **_git commit -m "Primeiro commit na branch nova!"_**
+    * **_git push origin formulario_**
+* AH, basta verificar que no repositório remoto a branch já está lá!
+* 
+    ![Captura de tela de 2022-10-17 16-35-55](https://user-images.githubusercontent.com/64020657/196266718-b016b8b0-454b-4ba5-a428-2ca6c3736052.png)
+
+### Em relação a branchs, quais comandos preciso aprender?
+   * **_git branch_** = lista todas as branchs da sua árvore de trabalho
+   * **_git branch >nome da branch<_** = cria uma nova branch
+   * **_git branch -d >nome da branch<_** = apaga uma branch na sua máquina
+   * **_git push origin --delete >nome da branch<_** = apaga uma branch no repositório remoto
+   * **_git branch -M >novo nome<_** = renomeia a branch
+   * **_git branch -a_** = lista todas as branchs do repositório remoto
