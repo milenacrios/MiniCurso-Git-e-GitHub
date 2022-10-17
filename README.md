@@ -12,7 +12,7 @@ Repositório criado a fim de expor os conteúdos ministrados no minicurso de Int
  
  E olhe...Levaria muito tempo, se eu ficasse aqui só apresentando as vantagens que o git oferece! Mas já deu para ter uma ideia, né?
  
- * O git nasceu com a necessidade de *controlar as mudanças nos códigos, sincronia na equipe de desenvolvimento e melhor visualização de todas as etapas do projeto* e muito mais!
+ * O git nasceu com a necessidade de *controlar as mudanças nos códigos, sincronia na equipe de desenvolvimento e melhor visualização de todas as etapas do projeto* e muito mais! Ele guarda todo o **histórico** de versões como na **imagem!**
   
     ![Captura de tela de 2022-10-15 18-44-45](https://user-images.githubusercontent.com/64020657/196008706-7fe21d4f-81cd-484a-bbe8-e8000f20c24e.png)
     
@@ -24,6 +24,7 @@ Repositório criado a fim de expor os conteúdos ministrados no minicurso de Int
       * **modified** = modificado
       * **staged** = preparado
     * Então basicamente, você modifica seus arquivos ali, no seu diretório de trabalho. Posteriormente, deve preparar esses arquivos e adicioná-los à área de stage, ou seja, na área de preparo e por fim, dá um **commit**, indicando que seus arquivos estarão copiados para uma área segura e permanente do diretório git. Em suma, o que acontece é que você vai **commitar** (ah, chamamos assim para indicar que você usou o comando **git commit**, logo logo você vai saber mais sobre!) as modificações ali na sua máquina e posteriormente vai **empurrar**, **git push** para o repositório remoto. Assim como na imagem abaixo!
+    * 
     ![Captura de tela de 2022-10-15 19-41-17](https://user-images.githubusercontent.com/64020657/196010198-e0653073-f578-4b87-84df-5398252c4ff0.png)
 ### Vantagens de se utilizar o GIT
   * Controle de Histórico
@@ -64,7 +65,7 @@ Repositório criado a fim de expor os conteúdos ministrados no minicurso de Int
             * **_git add ._**
           * Assim, ele adiciona todas as modificações encontradas. 
           * Resumindo, nós estamos **preparando** nosso arquivo para o nosso **primeiro commit**, indicando que estamos **gravando** nosso arquivo no repositório git criado, para que ele possa **monitorar** esse arquivo! Para **commitar**, basta inserir o comando:
-            * *_git commit -m "Primeiro commit"_**
+            * **_git commit -m "Primeiro commit"_**
           * O **-m** indica uma mensagem que devemos escrever sobre o que esse commit representa. Seja bastante específico, você pode dizer por exemplo:
               * **_"Commit para correção na linha 47 do arquivo da landing page"_** 
           * Então resumindo, nosso terminal deve-se parecer com isso:
@@ -73,7 +74,7 @@ Repositório criado a fim de expor os conteúdos ministrados no minicurso de Int
             
 ### Criando um repositório no github
   #### Mas afinal, o que é GitHub?
-  * GitHub é uma plataforma que possibilita a **hospedagem** de arquivos usando o controle de versionamento de arquivos do **git**. É um dos mais famosos **repositórios remotos** existentes, permitindo que você descarregue seus **repositórios locais** de forma **pública**, onde toda a comunidade tem acesso e de forma **privada**, somente você e os colaboradores possuem acesso. Além disso, o **GitHub** vem sendo muito utilizando como **portfólio**, muitos recutradores querem ver o que você anda desenvolvendo, como você desenvolve e normalmente o **GitHub** sempre é solicitado. Ele serve basicamente como uma **_"rede social"_**, uma vez que você expõe sua vida em projetos hahaha e todo mundo pode colaborar! É uma ótima comunidade! E você deve-se recordar daquela primeira imagem que mostramos aqui, o github é o repositório remoto! 
+  * GitHub é uma plataforma que possibilita a **hospedagem** de arquivos usando o controle de versionamento de arquivos do **git**. É um dos mais famosos **repositórios remotos** existentes, permitindo que você descarregue seus **repositórios locais** de forma **pública**, onde toda a comunidade tem acesso e de forma **privada**, somente você e os colaboradores possuem acesso. Além disso, o **GitHub** vem sendo muito utilizando como **portfólio**, muitos recutradores querem ver o que você anda desenvolvendo, como você desenvolve e normalmente o **GitHub** sempre é solicitado. Ele serve basicamente como uma **_"rede social"_**, uma vez que você expõe sua vida em projetos hahaha e todo mundo pode colaborar! É uma ótima comunidade! E você deve-se recordar daquela primeira imagem que mostramos aqui, o github é o **repositório remoto!** 
   
    ![Captura de tela de 2022-10-16 19-00-28](https://user-images.githubusercontent.com/64020657/196060317-89f0c370-04f8-4208-a510-5399cf9ba726.png)
     
@@ -97,7 +98,7 @@ Repositório criado a fim de expor os conteúdos ministrados no minicurso de Int
       * **git push -u origin main**
      
      Quando estiver no terminal, você pode se deparar com o seguinte erro:
-      * **"error: failed to push some refs to 'https://github.com/username/nomedorepositório.git'. Isso porque, o **GitHub** utiliza atualmente o nome **main** para suas branchs, mas o git, que ta na sua máquina chamou de **master** e por isso, o comando não conseguiu encontrar nenhuma branch com nome main para enviar. Dessa forma, uma boa prática, é chamar todas as branchs de main, por isso você pode mudar através do comando:
+      * **"error: failed to push some refs to 'https://github.com/username/nomedorepositório.git'**. Isso porque, o **GitHub** utiliza atualmente o nome **main** para suas branchs, mas o git, que ta na sua máquina chamou de **master** e por isso, o comando não conseguiu encontrar nenhuma branch com nome main para enviar. Dessa forma, uma boa prática, é chamar todas as branchs de main, por isso você pode mudar através do comando:
         * **_git branch -M "main"_**
       * Então recapitulando:
         * Você adicionou o **commit** da **sua máquina** para o **repositório remoto** com o comando:
@@ -115,7 +116,7 @@ Repositório criado a fim de expor os conteúdos ministrados no minicurso de Int
         
 #### Como clonar um repositório remoto para sua máquina
   * Esse comando que você vai aprender agora, permite que você **descarregue** o repositório lá do **GitHub** para um diretório na sua máquina. Bastando que você abra o terminal no **diretório** que deseja que o clone seja **armazenado**, copie o **link** no formato **HTTPS** do **repositório** do **GitHub** e insira no comando:
-    * **_git clone <link do repositório>
+    * **_git clone <link do repositório>**
     * Dessa forma:
     
       ![Captura de tela de 2022-10-16 19-51-29](https://user-images.githubusercontent.com/64020657/196062259-77e8f271-74ad-41f4-a057-74a06d638b8a.png)
