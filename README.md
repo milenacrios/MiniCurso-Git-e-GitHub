@@ -134,6 +134,54 @@ Repositório criado a fim de expor os conteúdos ministrados no minicurso de Int
         
         ![Captura de tela de 2022-10-16 20-04-40](https://user-images.githubusercontent.com/64020657/196062757-7339dfef-0eab-4904-ac8c-75c3d12dfa5e.png)
       
-        
-          
-     
+### Exibir as alterações realizadas
+ * O comando que você vai aprender agora, possibilita que você consiga identificar o que foi **alterado** e ainda não está sendo **monitorado** pelo git, o que quer dizer que não foi **adicionado** à **área de staging** e nem **commitado**. Diferentemente do git status, que indica o arquivo em questão e o **estado** dele, que pode ser **modiffied** quando sofreu uma **modificação**, o **git diffi** mostra exatamente as linhas alteradas por exemplo. 
+ * Para entender melhor, adicione mais uma linha no arquivo **readme,md** com a seguinte frase:
+   * **"Alterando mais uma vez este arquivo!"**
+ * Posteriormente, digite o comando **_git diffi_** no terminal e ele indicará exatamente a **modificação** realizada e que ainda não foi enviado ao repositório git. Seu terminal pode ser parecer como esse!
+ 
+  ![Captura de tela de 2022-10-17 14-27-21](https://user-images.githubusercontent.com/64020657/196243510-37aec133-237e-4d98-8a5a-7877fa251006.png)
+ 
+### Remoção de um arquivo do repositório git
+ * Para entedermos melhor o comando a seguir, crie um novo arquivo para teste, do tipo html. Você pode escrever uma frase qualquer e salvar como sendo?
+   * **_index.html_**
+ * Agora, vamos supor que vocẽ não deseja mais que o arquivo seja **monitorado** pelo git, ou seja, que ele pertença ao **repositório git** e nem ao **repositório remoto** (_GitHub_). Se você apenas excluir da pasta **Minicurso Git**, ou seja, do seu diretório local, esse arquivo irá para uma área de **_unstaging_**, que é área de arquivos modificados e ainda não preparados, e ainda sim, vai continuar no **repositório remoto** (apenas dê um **push** depois para atualizar sobre a remoção). Sendo assim, existe o comando:
+   * **_git rm_** ele remove o arquivo por completo da árvore e do seu diretório, pasta especificar qual arquivo deseja remover. 
+    * **_git rm index.html_**
+   * Ao dar um **_git satatus_**, perceberá o resultado: **_deleted: index.html_**
+   
+     ![Captura de tela de 2022-10-17 14-47-34](https://user-images.githubusercontent.com/64020657/196247093-1cca0e4d-7da1-4f0f-a007-ebe5ae4972f7.png)
+ ### Como vizualizar o Histórico de todos os commits?
+  * Você desenvolve uma funcionalidade, termina e...**commita**. Você corrige um bug e **commita**. Você termina o requisito e **commita**. É possível visualizar _todos_ os **commits** realizados? A resposta é **sim**. Você pode tanto visualizar os **commits** do seu repositório quanto de um repositório **clonado**! E é bastante simples, basta utilizar o comando abaixo no seu terminal e ele mostrará todos os commits:
+    * **_git log_**
+    
+    ![Captura de tela de 2022-10-17 14-54-17](https://user-images.githubusercontent.com/64020657/196248267-c844f1a2-3e75-410f-b7a2-ad77f2a65951.png)
+    
+### Atualizando seu repositório local
+ * Continuando nosso trajeto em aprender como o git funciona, vamos entender agora como atualizar nosso repositório local com base em **objetos** e **referências** do repositório remoto, lá do **github**. Mas por quê? Bem, imagine que uma grande equipe está trabalhando no desenvolvimento de um software e você é um dos desenvolvedores responsáveis por certa parte do software. Acontece que alguns trabalhos dependem um dos outros e você precisa **receber** as aplicações dos seus outros colegas na sua máquina, mantendo a sua **branch** atualizada! 
+ * O comando responsável por procurar por todos os **commits**, **arquivos** e **referências** de um **repositório remoto** para seu **repositório local**, possibilitando vizualizar a aplicação completa naquele instante e podendno analisar o **histórico** da produção, acompanhando como a equipe está progredindo e principalmente, manter a sua **branch** com funcionalidades desenvolvidades que podem ser requisito para o seu desenvolvimento, é o:
+   * **_git fetch_**
+ 
+   ![Captura de tela de 2022-10-17 15-38-12](https://user-images.githubusercontent.com/64020657/196256359-750ede12-7f5c-4346-a67c-2683aa294bbc.png)
+ 
+ * No entando, o comando apenas baixa o conteúdo do **repositório remoto**, mas não atualiza o estado de trabalho do seu **repositório local**, deixando seu trabalho atual intacto. Para **unir** o conteúdo do **repositório remoto** com o seu, é necessário utilizar o comando:
+   * **_git pull_**
+ * Ele irá executar um outro comando automaticamente, o **_git merge_**, mas não se preocupe que você vai aprender ainda sobre isso. Por enquanto, apenas absorva as definições de **git fetch** e **git pull**!
+
+
+### Agora, vamos falar de branch!
+ * Vamos fazer uma breve revisão sobre a definição de **branch**! Vamos imaginar uma situação hipotética, onde você, **desenvolvedor** deseja adicionar uma nova funcionalidade à sua aplicação web, um **formulário**, por exemplo. Para isso, você cria uma nova branch para desenvolver essa funcionalidade sem interferir diretamente em outras partes do código. E nomeia sua branch de **formulário** e começa a desenvolver. Nesse sentido, a árvore de trabalho poderá ser semelhante como essa, onde possui a **branch main** e as outras **branchs** independentes. 
+   
+   ![Captura de tela de 2022-10-17 16-03-39](https://user-images.githubusercontent.com/64020657/196260891-4b96558d-90cb-4bdf-950d-e4ba11d81694.png)
+ #### Mas então, como criamos uma branch? Como criar a branch _formulário_?
+  * Nós podemos criar uma branch de duas maneiras:
+    * A primeira, usando o seguinte comando: 
+     * **_git branch <nome da branch>_** -> para a branch formulário, temos: **_git branch formulário_**
+     * Nesse caso, ele apenas cria a branch sem dar **checkout** nela, ou seja, sem mudar da **branch anterior** para a nova criada. Para mudar de ramo, use o comando: 
+        * **_git checkout <nome da branch>
+    * A segunda, usando o comando:
+     * **_git checkout -b <nome da branch>
+     * Se você estiver na branch main, e criar a nova branch **formulário** com o checkout, automaticamente, você sai da branch **main** e muda para a branch **formulário**. Você pode verificar isso com o comando **_git status_** e poderá verificar a lista de branchs da sua árvore de trabalho, com o comando:
+       * **_git branch_**
+  * Para criar a branch formulário, eu fiz dessa forma:
+    
