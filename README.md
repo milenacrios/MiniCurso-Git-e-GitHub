@@ -209,9 +209,13 @@ Repositório criado a fim de expor os conteúdos ministrados no minicurso de Int
     
     ![Captura de tela de 2022-10-17 22-40-33](https://user-images.githubusercontent.com/64020657/196315407-de09ca2b-80aa-4151-9ec5-432a042a6e1c.png)
  * A branch **bugfix** foi criada a partir da branch **main**, ou seja, você estava (**checkout**) na branch **main** quando criou a branch **bugfix**. Mas também há outros tipos de branchs, como a **hotfix** que é criada a partir de branchs de **procução**. Você pode entender melhor, acessando a documentação do [gitflow](https://www.atlassian.com/br/git/tutorials/comparing-workflows/gitflow-workflow). E vamos continuar!
- * Após criar a branch **bugfix**, você programou e programou e, finalmente, corrigiu o erro no site e agora? Agora, você já pode _enviar_ essa correção à linha **principal**, ou seja, para a branch **main**. E para fazermos isso, você vai voltar para a branch **main**, braou seja, dando **checkout** nela e vai executar o famoso **git merge** na branch **bugfix**. Desse jeitinho:
-     * **_git checkout -b bugfix_** = aqui você criou a branch para correção do erro, a partir da branch main pois era nela que você estava
-     * Após realizar os commits com a correção, você finaliza sua função e precisa voltar para branch **main**     
-           **_git checkout main_**
-     * Agora, você vai unir a main com a **bugfix**
-           **_git merge bugfix_**
+      * Após criar a branch **bugfix**, você programou e programou e, finalmente, corrigiu o erro no site e agora? Agora, você já pode _enviar_ essa correção à linha **principal**, ou seja, para a branch **main**. E para fazermos isso, você vai voltar para a branch **main**, ou seja, dando **checkout** nela e vai executar o famoso **git merge** na branch **bugfix**. Desse jeitinho:
+        * **_git checkout -b bugfix_** = aqui você criou a branch para correção do erro, a partir da branch main pois era nela que você estava
+          * Após realizar os commits com a correção, você finaliza sua função e precisa voltar para branch **main**     
+              * **_git checkout main_**
+          * Agora, você vai unir a main com a **bugfix**
+              * **_git merge bugfix_**
+      
+      
+  * ajjhjh
+      * hbubjj
