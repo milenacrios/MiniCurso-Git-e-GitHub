@@ -197,7 +197,7 @@ Repositório criado a fim de expor os conteúdos ministrados no minicurso de Int
 * 
     ![Captura de tela de 2022-10-17 16-35-55](https://user-images.githubusercontent.com/64020657/196266718-b016b8b0-454b-4ba5-a428-2ca6c3736052.png)
 
-### Em relação a branchs, quais comandos preciso aprender?
+### Em relação a branchs, quais comandos é importante saber?
    * **_git branch_** = lista todas as branchs da sua árvore de trabalho
    * **_git branch >nome da branch<_** = cria uma nova branch
    * **_git branch -d >nome da branch<_** = apaga uma branch na sua máquina
