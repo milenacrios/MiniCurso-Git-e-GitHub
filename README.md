@@ -204,3 +204,14 @@ Repositório criado a fim de expor os conteúdos ministrados no minicurso de Int
    * **_git push origin --delete >nome da branch<_** = apaga uma branch no repositório remoto
    * **_git branch -M >novo nome<_** = renomeia a branch
    * **_git branch -a_** = lista todas as branchs do repositório remoto
+### Hora de aprender sobre Merge!
+ * Suponha que você acaba de receber um email de alguém avisando que há um problema no site que você está desenvolvendo. Como já aprendemos sobre **ramificações**, você não precisa adicionar a correção do problema junto à **branch** principal de desenvolvimento e, portanto, pode criar uma branch **independente** e **paralela**, que vamos chamar de **bugfix**. Assim sua árvore de trabalho, além de outras branchs ou não, terá com certeza um formato parecido com esse: 
+    
+    ![Captura de tela de 2022-10-17 22-40-33](https://user-images.githubusercontent.com/64020657/196315407-de09ca2b-80aa-4151-9ec5-432a042a6e1c.png)
+ * A branch **bugfix** foi criada a partir da branch **main**, ou seja, você estava (**checkout**) na branch **main** quando criou a branch **bugfix**. Mas também há outros tipos de branchs, como a **hotfix** que é criada a partir de branchs de **procução**. Você pode entender melhor, acessando a documentação do [gitflow](https://www.atlassian.com/br/git/tutorials/comparing-workflows/gitflow-workflow). E vamos continuar!
+ * Após criar a branch **bugfix**, você programou e programou e, finalmente, corrigiu o erro no site e agora? Agora, você já pode _enviar_ essa correção à linha **principal**, ou seja, para a branch **main**. E para fazermos isso, você vai voltar para a branch **main**, braou seja, dando **checkout** nela e vai executar o famoso **git merge** na branch **bugfix**. Desse jeitinho:
+     * **_git checkout -b bugfix_** = aqui você criou a branch para correção do erro, a partir da branch main pois era nela que você estava
+     * Após realizar os commits com a correção, você finaliza sua função e precisa voltar para branch **main**     
+           **_git checkout main_**
+     * Agora, você vai unir a main com a **bugfix**
+           **_git merge bugfix_**
