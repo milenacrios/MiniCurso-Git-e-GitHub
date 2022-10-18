@@ -216,6 +216,13 @@ Repositório criado a fim de expor os conteúdos ministrados no minicurso de Int
           * Agora, você vai unir a main com a **bugfix**
               * **_git merge bugfix_**
       
-      
-  * ajjhjh
-      * hbubjj
+ #### Resolvendo conflitos 
+  * Nem sempre quando se da **merge** entre branchs ocorre sem nenhum problema, e acostume-se com isso! Se houveram duas alterações na mesma parte de um arquivo em **branchs diferentes** e você tentar unir essas duas branchs, o **não** poderá mesclá-las. Isso porque, é como se ele tivesse ficado **"confuso"** já que você adicionou uma linha exatamente igual que o seu colega e no mesmo arquivo. Qual ele deve inserir na main? Qual a linha de código **"certa"?**. Para entender melhor, vamos praticar?
+   * Na branch **main**, crie um arquivo **index.html** e crie um código html com um título h1: **"Aprendendo GIT"** (não esqueça de commitar e empurrar para o repositório remoto). Dessa forma:
+    ![Captura de tela de 2022-10-18 00-00-31](https://user-images.githubusercontent.com/64020657/196325618-24eba59d-e519-4c3b-b65e-f44290fec6ab.png)
+   * Seu terminal pode está assim:
+    ![Captura de tela de 2022-10-18 00-04-24](https://user-images.githubusercontent.com/64020657/196326042-d136dd18-c3a1-4289-8cc1-3e45dabdb073.png)
+   * Agora, você irá criar uma nova branch, chame ela de **FrontEnd** e atualize com a branch **main**. Ou seja, receba os arquivos da branch **main** para a branch **FrontEnd** e para isso, basta da **checkout** na branch **main** e um **merge** com a branch **FrontEnd**. Seu terminal deve está assim:
+    ![Captura de tela de 2022-10-18 00-15-44](https://user-images.githubusercontent.com/64020657/196327395-6dde7190-b2b5-4c8f-9a9a-beeb3d7ea8ea.png)
+   * Então, basicamente o que fizemos acima foi criar a branch **FrontEnd**, da **checkout** na **main**, **mesclar** com a branch **FrontEnd**, e empurrar para o **repositório remoto** com o **git push origin FrontEnd**. 
+  
