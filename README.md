@@ -218,11 +218,39 @@ Repositório criado a fim de expor os conteúdos ministrados no minicurso de Int
       
  #### Resolvendo conflitos 
   * Nem sempre quando se da **merge** entre branchs ocorre sem nenhum problema, e acostume-se com isso! Se houveram duas alterações na mesma parte de um arquivo em **branchs diferentes** e você tentar unir essas duas branchs, o **não** poderá mesclá-las. Isso porque, é como se ele tivesse ficado **"confuso"** já que você adicionou uma linha exatamente igual que o seu colega e no mesmo arquivo. Qual ele deve inserir na main? Qual a linha de código **"certa"?**. Para entender melhor, vamos praticar?
-   * Na branch **main**, crie um arquivo **index.html** e crie um código html com um título h1: **"Aprendendo GIT"** (não esqueça de commitar e empurrar para o repositório remoto). Dessa forma:
+   * Na branch **main**, crie um arquivo **index.html** e crie um código html com um título h1: **"Aprendendo GIT"** (não esqueça de commitar e empurrar para o repositório remoto). Dessa forma:    
     ![Captura de tela de 2022-10-18 00-00-31](https://user-images.githubusercontent.com/64020657/196325618-24eba59d-e519-4c3b-b65e-f44290fec6ab.png)
-   * Seu terminal pode está assim:
+   * Seu terminal pode está assim:    
     ![Captura de tela de 2022-10-18 00-04-24](https://user-images.githubusercontent.com/64020657/196326042-d136dd18-c3a1-4289-8cc1-3e45dabdb073.png)
    * Agora, você irá criar uma nova branch, chame ela de **FrontEnd** e atualize com a branch **main**. Ou seja, receba os arquivos da branch **main** para a branch **FrontEnd** e para isso, basta da **checkout** na branch **main** e um **merge** com a branch **FrontEnd**. Seu terminal deve está assim:
     ![Captura de tela de 2022-10-18 00-15-44](https://user-images.githubusercontent.com/64020657/196327395-6dde7190-b2b5-4c8f-9a9a-beeb3d7ea8ea.png)
-   * Então, basicamente o que fizemos acima foi criar a branch **FrontEnd**, da **checkout** na **main**, **mesclar** com a branch **FrontEnd**, e empurrar para o **repositório remoto** com o **git push origin FrontEnd**. 
+   * Então, basicamente o que fizemos acima foi criar a branch **FrontEnd**, da **checkout** na **main**, **mesclar** com a branch **FrontEnd**, e empurrar para o **repositório remoto** com o **git push origin FrontEnd**. Assim, todas as branchs estão com o mesmo arquivo. 
+   * Agora, vamos alterar o **index.html** na branch **main** e alterar o título **h1** para: **"Aprendendo a corrigir conflitos"**. Depois disso, adicione à **área de staging**, **commit** e **push** assim como já aprendemos. Posteriormente, dê **checkout** na branch **FrontEnd** e altere o arquivo **index.html** na mesma linha que alteramos na branch main, mudando o **h1** para: **"Aprendendo a corrigir conflitos com o git"**, adicione à **área de staging**, **commit** e **push** na branch FrontEnd. Ao abrir o **github**, você verá que os arquivos nas duas branchs (main e FrontEnd) estão diferentes:
+   
+   ![Captura de tela de 2022-10-18 22-12-20](https://user-images.githubusercontent.com/64020657/196574037-1b05e4f3-9654-4ccf-81a0-3cc2c3a6f3a0.png)
+   
+  * Até ai tudo certo, já que alteramos o mesmo arquivo em **branchs diferentes**, mas e se chegou ao fim da minha aplicação e eu queira unir a branch **FrontEnd** com a branch **main**? Qual linha o git vai aceitar como a certa, o **h1** da branch **main** ou o **h1** da branch **FrontEnd**? Para isso, dê **checkout** na branch **main** e em seguida mescle com a **FrontEnd**, assim como já vimos: **git merge FrontEnd**. E...CONFLITO! seu terminal deve apresentar:
+   
+   ![Captura de tela de 2022-10-18 22-18-33](https://user-images.githubusercontent.com/64020657/196574692-a4648edb-2bf6-478a-978a-35239f9063c2.png)
+ * Ou seja, o **git** nos retornou um **conflito de mesclagem** ao tentar unir o conteúdo do arquivo **index.html** da branch **FrontEnd** com a branch **main** e, portanto,  o merge falhou e você precisa resolver primeiro os conflitos e tentar unir novamente. Para resolver os conflitos, você pode usar o **visual studio code** e ele irá indicar o conflito com algumas opções de resolver, tal qual a imagem abaixo:
   
+  ![Captura de tela de 2022-10-18 22-22-19](https://user-images.githubusercontent.com/64020657/196575143-c7cbb954-5e4f-48df-b8c6-452f094d57c4.png)
+ * Bom, ele mostrou as duas linhas alteradas e é como se estivesse perguntando pra você: Qual é a linha que deve ficar? Você pode utilizar o comando **git diff** para verificar as diferenças entre os arquivos ou o **vscode**, dessa forma:
+  ![Captura de tela de 2022-10-18 22-27-52](https://user-images.githubusercontent.com/64020657/196575742-0a1527fa-c7e9-4197-97a3-ad644b87414e.png)
+ * No **VSCODE** você pode aceitar algumas opções:
+    * **_Accept current change_** = você indica que o código correto é o **current change**, ou seja, o código que tava na sua máquina quando você deu **merge** e escolher essa opção, que é o bloco verde do visual studio code, indica que ela será a que permanecerá no código. 
+    * **_Accept incoming change_** = você irá aceitar como código "correto" o que está indicado em azul, ou seja, o arquivo da branch FrontEnd e só essa parte permanecerá no arquivo. 
+    * **_Accept booth change_** = indica que você "aceitou" os dois trechos de códigos. 
+    * **_Compare changes_** = mostrará as diferenças lado a lado para que escolha a "correta". 
+ * No nosso exemplo, vamos supor que eu queira a opção **_accept current change_**, deixando apenas o que estava na branch **main**. Agora é só **commitar**, indicando que o conflito foi resolvido. 
+ 
+  ![Captura de tela de 2022-10-18 22-51-42](https://user-images.githubusercontent.com/64020657/196578527-fee26549-3024-42dd-960e-f8a75433d1d2.png)
+ 
+### Chegou a hora do Pull Request
+ * Quando você termina de desenvolver sua função, você pode avisar aos seus colegas de equipe sobre o término, através de um **pull request**. Assim, quando eles recebem a requisição, deve ser feita uma **revisão** afim de verificar se está tudo ok mesmo com o que você desenvolveu e, portanto, pode subir para **main** ou carece de mais algum trabalho. É uma forma de você receber um **feedback** sobre o que desenvolveu!
+ * O pull request é feito aqui no próprio **github** e você deve escolher a branch de comparação, que é aquela que você é "dono", ou seja, onde você terminou sua função e a branch base, que no caso é a main. 
+ * Para maiores informações sobre pull request, você pode acessar a [documentação](https://docs.github.com/pt/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)!
+ 
+ ### Conclusão
+  * O git é, sem dúvidas, _essencial_ na vida de um programador e aprender sobre, torna a sua função mais otimizada possível. Não deixe de compartilhar seus projetos no **github**, é só um **push** para admirar seu percursso como desenvolvedor!
+  * Acesse a documentação do [git](https://www.git-scm.com/doc), [gitflow](https://www.atlassian.com/br/git/tutorials/comparing-workflows/gitflow-workflow) e [github](https://docs.github.com/pt). 
