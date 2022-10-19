@@ -252,5 +252,5 @@ Repositório criado a fim de expor os conteúdos ministrados no minicurso de Int
  * Para maiores informações sobre pull request, você pode acessar a [documentação](https://docs.github.com/pt/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)!
  
  ### Conclusão
-  * O git é, sem dúvidas, _essencial_ na vida de um programador e aprender sobre, torna a sua função mais otimizada possível. Não deixe de compartilhar seus projetos no **github**, é só um **push** para admirar seu percursso como desenvolvedor!
+  * O git é, sem dúvidas, _essencial_ na vida de um programador e aprender sobre, torna a sua função mais otimizada possível. Não deixe de compartilhar seus projetos no **github**, é só um **push** para podermos admirar seu percursso como desenvolvedor!
   * Acesse a documentação do [git](https://www.git-scm.com/doc), [gitflow](https://www.atlassian.com/br/git/tutorials/comparing-workflows/gitflow-workflow) e [github](https://docs.github.com/pt). 
