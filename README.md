@@ -78,7 +78,7 @@ Repositório criado a fim de expor os conteúdos ministrados no minicurso de Int
   
    ![Captura de tela de 2022-10-16 19-00-28](https://user-images.githubusercontent.com/64020657/196060317-89f0c370-04f8-4208-a510-5399cf9ba726.png)
     
-  * Agora que já sabemos o que é **GitHub**, vamos criar nosso primeiro **reoisitório remoto** e **clonar** para nossa máquina!
+  * Agora que já sabemos o que é **GitHub**, vamos criar nosso primeiro **repositório remoto** e **clonar** para nossa máquina!
   
   * Para criar um repositório, tendo já criado uma conta no github, basta ir em seu **perfil** e na aba de **repositórios**, você logo irá ver um botão na cor de verde esrito **New**, é onde você deve clicar para criar o primeiro **repositório remoto**
   
