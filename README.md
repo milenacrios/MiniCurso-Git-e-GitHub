@@ -24,7 +24,7 @@ Repositório criado a fim de expor os conteúdos ministrados no minicurso de Int
       * **modified** = modificado
       * **staged** = preparado
     * Então basicamente, você modifica seus arquivos ali, no seu diretório de trabalho. Posteriormente, deve preparar esses arquivos e adicioná-los à área de stage, ou seja, na área de preparo e por fim, dá um **commit**, indicando que seus arquivos estarão copiados para uma área segura e permanente do diretório git. Em suma, o que acontece é que você vai **commitar** (ah, chamamos assim para indicar que você usou o comando **git commit**, logo logo você vai saber mais sobre!) as modificações ali na sua máquina e posteriormente vai **empurrar**, **git push** para o repositório remoto. Assim como na imagem abaixo!
-    * 
+   
     ![Captura de tela de 2022-10-15 19-41-17](https://user-images.githubusercontent.com/64020657/196010198-e0653073-f578-4b87-84df-5398252c4ff0.png)
 ### Vantagens de se utilizar o GIT
   * Controle de Histórico
@@ -33,7 +33,7 @@ Repositório criado a fim de expor os conteúdos ministrados no minicurso de Int
   * Organização
   * **Ramificações**
 ### Mas o que são ramificações?
-  * Um outro conceito muito importante é o de ramificações. Isso porque, as **ramificações** são um recurso indispensável no processo de desenvolvimento diário utilizando o **git**. Quando falamos em um desenvolvimento de um x projeto, é sempre muito importante definir quem será responsável por desenvolver o que desse projeto e é por isso que há muitas especializações na computação. Afinal, não da pra dar conta de tudo, não é mesmo? Nesse sentido, o git possibilita você criar várias **branches**, permitindo que você desenvolva recursos, funcionalidades, corrija bugs e por ai vai. Cada **branch** criada terá uma importância nas modificações do projeto. Você pode imaginar que funciona como uma **árvore**, onde ela completa é o projeto inteiro e cada **galho** é uma parte desse projeto que está sendo desenvolvida, seja por exemplo, uma branch para corrigir **bugs**, que podemos nomeá-la de **bugfix** ou uma branch para adicionar uma determinada funcionalidade ao projeto, que podemos chamar, por  exemplo, de **features** 
+  * Um outro conceito muito importante é o de **ramificações**. Isso porque, as **ramificações** são recursos indispensáveis no processo de desenvolvimento diário utilizando o **git**. Quando falamos em um desenvolvimento de um x projeto, é sempre muito importante definir quem será responsável por desenvolver o que desse projeto e é por isso que há muitas especializações na computação. Afinal, não da pra dar conta de tudo, não é mesmo? Nesse sentido, o git possibilita você criar várias **branches**, permitindo que você desenvolva recursos, funcionalidades, corrija bugs e por ai vai. Cada **branch** criada terá uma importância nas modificações do projeto. Você pode imaginar que funciona como uma **árvore**, onde ela completa é o projeto inteiro e cada **galho** é uma parte desse projeto que está sendo desenvolvida, seja por exemplo, uma branch para corrigir **bugs**, que podemos nomeá-la de **bugfix** ou uma branch para adicionar uma determinada funcionalidade ao projeto, que podemos chamar, por  exemplo, de **features** 
   
      ![Captura de tela de 2022-10-16 17-33-50](https://user-images.githubusercontent.com/64020657/196056943-e4db297b-7350-4d94-ab84-b40bc911b2f7.png)
   
@@ -47,7 +47,7 @@ Repositório criado a fim de expor os conteúdos ministrados no minicurso de Int
   * Vamos criar o nosso primeiro *projeto* com git. Mas, calma, vamos ver tudo passo a passo!
     ### Novo projeto
       * Se você instalou o git, pode abrir o seu **git bash** se tiver no windows, mas também o próprio **CMD** e nos sistemas de kernel **linux**, abra o **terminal** e vamos para o seu **primeiro comando**, mas antes vou precisar que você siga alguns desses passos:
-        * Crie uma nova pasta no seu computador e pode nomeá-la de **Minicurso GIT**
+        * Crie uma nova pasta no seu computador e nomeie de **Minicurso GIT**
         * Dentro dessa pasta, crie um arquivo qualquer, pode ser desse mesmo tipo (md) e chame de **readme.md**
       * Agora vamos inicializar um repositório git vazio nessa pasta. Abra o **terminal** ou **git bash** e digite:
         * **_git init_**
@@ -56,7 +56,7 @@ Repositório criado a fim de expor os conteúdos ministrados no minicurso de Int
            ![Captura de tela de 2022-10-16 18-11-46](https://user-images.githubusercontent.com/64020657/196058532-89eb08d8-d3b8-4fb3-86ff-648a68aaef80.png)
          * Pronto, você criou seu primeiro repositório git! Agora, você pode verificar o status da sua **árvore de trabalho** com o comando:
             * **_git status_**
-         * Como resultado, ele irá mostrar os arquivos modificados que ainda não foram adicionado à **área de preparo**. Nesse caso, os arquivos que o git ainda não esta **"rastreando"** ou **"monitorando"**. No caso ele irá avisar sobre o arquivo que nós criamos **readme.md** e vai indicar que devemos adicionar à **área de staging**. Seu terminal pode se parecer como o meu:
+         * Como resultado, ele irá mostrar os arquivos modificados que ainda não foram adicionado à **área de preparo**. Nesse caso, os arquivos que o git ainda não esta **"rastreando"** ou **"monitorando"**. Assim, o git avisa sobre o arquivo que nós criamos **readme.md** e vai indicar que devemos adicionar à **área de staging**. Seu terminal pode se parecer como o meu:
          
          ![Captura de tela de 2022-10-16 18-20-46](https://user-images.githubusercontent.com/64020657/196058896-08ce25b6-d706-404a-84b0-20e65f2fc620.png)
         * Então vamos adicionar nossas modificações à área de preparo com o comando:
@@ -64,7 +64,7 @@ Repositório criado a fim de expor os conteúdos ministrados no minicurso de Int
           * Nesse caso ele adicionou o arquivo, mas também podemos utilizar da seguinte forma:
             * **_git add ._**
           * Assim, ele adiciona todas as modificações encontradas. 
-          * Resumindo, nós estamos **preparando** nosso arquivo para o nosso **primeiro commit**, indicando que estamos **gravando** nosso arquivo no repositório git criado, para que ele possa **monitorar** esse arquivo! Para **commitar**, basta inserir o comando:
+          * Resumindo, nós estamos **preparando** nosso arquivo para o nosso **primeiro commit**, indicando que estamos **gravando** nosso arquivo no repositório git para que ele possa **monitorar** esse arquivo! Para **commitar**, basta inserir o comando:
             * **_git commit -m "Primeiro commit"_**
           * O **-m** indica uma mensagem que devemos escrever sobre o que esse commit representa. Seja bastante específico, você pode dizer por exemplo:
               * **_"Commit para correção na linha 47 do arquivo da landing page"_** 
@@ -74,13 +74,13 @@ Repositório criado a fim de expor os conteúdos ministrados no minicurso de Int
             
 ### Criando um repositório no github
   #### Mas afinal, o que é GitHub?
-  * GitHub é uma plataforma que possibilita a **hospedagem** de arquivos usando o controle de versionamento de arquivos do **git**. É um dos mais famosos **repositórios remotos** existentes, permitindo que você descarregue seus **repositórios locais** de forma **pública**, onde toda a comunidade tem acesso e de forma **privada**, somente você e os colaboradores possuem acesso. Além disso, o **GitHub** vem sendo muito utilizando como **portfólio**, muitos recutradores querem ver o que você anda desenvolvendo, como você desenvolve e normalmente o **GitHub** sempre é solicitado. Ele serve basicamente como uma **_"rede social"_**, uma vez que você expõe sua vida em projetos hahaha e todo mundo pode colaborar! É uma ótima comunidade! E você deve-se recordar daquela primeira imagem que mostramos aqui, o github é o **repositório remoto!** 
+  * GitHub é uma plataforma que possibilita a **hospedagem** de arquivos usando o controle de versionamento de arquivos do **git**. É um dos mais famosos **repositórios remotos** existentes, permitindo que você descarregue seus **repositórios locais** de forma **pública**, onde toda a comunidade tem acesso e de forma **privada**, somente você e os colaboradores conseguem visualizar. Além disso, o **GitHub** vem sendo muito utilizando como **portfólio**, muitos recutradores querem ver o que você anda desenvolvendo, como você desenvolve e normalmente o **GitHub** sempre é solicitado. Ele serve basicamente como uma **_"rede social"_**, uma vez que você expõe sua vida em projetos hahaha e todo mundo pode colaborar! É uma ótima comunidade! E você deve se recordar daquela primeira imagem que mostramos aqui, o github é o **repositório remoto!** 
   
    ![Captura de tela de 2022-10-16 19-00-28](https://user-images.githubusercontent.com/64020657/196060317-89f0c370-04f8-4208-a510-5399cf9ba726.png)
     
   * Agora que já sabemos o que é **GitHub**, vamos criar nosso primeiro **repositório remoto** e **clonar** para nossa máquina!
   
-  * Para criar um repositório, tendo já criado uma conta no github, basta ir em seu **perfil** e na aba de **repositórios**, você logo irá ver um botão na cor de verde esrito **New**, é onde você deve clicar para criar o primeiro **repositório remoto**
+  * Para criar um repositório, tendo já criado uma conta no github, basta ir em seu **perfil** e na aba de **repositórios**, você logo irá ver um botão na cor verde esrito **New**, é onde você deve clicar para criar um **repositório**.
   
     ![Captura de tela de 2022-10-16 19-05-02](https://user-images.githubusercontent.com/64020657/196060512-8a422056-9fa1-405e-8e78-6d81d68a5463.png)
     
@@ -88,13 +88,13 @@ Repositório criado a fim de expor os conteúdos ministrados no minicurso de Int
     
     ![Captura de tela de 2022-10-16 19-08-21](https://user-images.githubusercontent.com/64020657/196060629-54c05066-5612-4ed3-9117-5ddbc227f0f5.png)
     
-  * Agora iremos adicionar o nosso repositório que está **localmente**, ou seja, na nossa máquina, o **Minicurso Git** ao reposiório remoto que acabamos de criar no github, basta inserirmos o seguinte comando ao **terminal** ou **git bash**
+  * Agora iremos adicionar o nosso repositório que está **localmente**, ou seja, na nossa máquina, que nomeamos de **Minicurso Git** ao reposiório remoto que acabamos de criar no github, basta inserirmos o seguinte comando ao **terminal** ou **git bash**
     * **_git remote add origin <link do repositório>_**
       * Onde esse link é disponibilizado na página do repositório que você criou no github. E ele está disponível em duas formas, **HTTPS** ou **SSH**. Nesse tutorial, vamos utilizar o link no formato **HTTPS**. Basta selecionar a opção e copiar o link para adicionarmos ao terminal com o comando anterior: 
       
       ![Captura de tela de 2022-10-16 19-17-26](https://user-images.githubusercontent.com/64020657/196060985-3b8718ca-611b-4311-ba1c-091c2b66b4ce.png)
       
-     * E origin é como chamamos o repositório de **origem** do github! Pronto, passamos o **commit** da nosa máquina para o repositório no **github**. Agora vamos atualizar o **repositório remoto**, **_empurrando_** esse commit da branch atual (**main**) para o github com o seguinte comando:
+     * E **origin** é como chamamos a conexão do repositório git com o do github! Pronto, passamos o **commit** da nosa máquina para o repositório no **github**. Agora vamos atualizar o **repositório remoto**, **_empurrando_** esse commit da branch atual (**main**) para o github com o seguinte comando:
       * **git push -u origin main**
      
      Quando estiver no terminal, você pode se deparar com o seguinte erro:
@@ -103,7 +103,7 @@ Repositório criado a fim de expor os conteúdos ministrados no minicurso de Int
       * Então recapitulando:
         * Você adicionou o **commit** da **sua máquina** para o **repositório remoto** com o comando:
           * **_git remote add origin <link do seu repositório>_**
-        * Depois, você precisa atualizar o **repositório remoto** para receber esse commit, com o comando:
+        * Depois, você precisou atualizar o **repositório remoto** para receber esse commit, com o comando:
           * **_git push -u origin main_**
         * Caso ele tenha reconhecido um erro devido ao nome da branch, você corrigiu com o comando:
           * **_git branch -M "main"_**
@@ -112,7 +112,7 @@ Repositório criado a fim de expor os conteúdos ministrados no minicurso de Int
       
           ![Captura de tela de 2022-10-16 19-37-20](https://user-images.githubusercontent.com/64020657/196061767-82229b9d-808c-4382-b202-d76bd51b8beb.png)
           
-        * Pronto, se você voltar ao seu **repositório** no **GitHub**, verá que o commit que o que você tinha feito apenas na **sua máquina** agora está no **GitHub**
+        * Pronto, se você voltar ao seu **repositório** no **GitHub**, verá que o commit que você tinha feito apenas na **sua máquina** agora está no **GitHub**
         
 #### Como clonar um repositório remoto para sua máquina
   * Esse comando que você vai aprender agora, permite que você **descarregue** o repositório lá do **GitHub** para um diretório na sua máquina. Bastando que você abra o terminal no **diretório** que deseja que o clone seja **armazenado**, copie o **link** no formato **HTTPS** do **repositório** do **GitHub** e insira no comando:
@@ -122,9 +122,9 @@ Repositório criado a fim de expor os conteúdos ministrados no minicurso de Int
       ![Captura de tela de 2022-10-16 19-51-29](https://user-images.githubusercontent.com/64020657/196062259-77e8f271-74ad-41f4-a057-74a06d638b8a.png)
 
 ### Alterando na nossa máquina e atualizando o repositório remoto!
-  * Bom, já sabemos que modificações acontece a todo momento na vida de um programador. Mas como iremos enviar essas atualizações que estão na **nossa máquina** para o **github**? Vamos ao teste, modifique o arquivo **readme.md** e acrescente a seguinte frase: 
+  * Bom, já sabemos que modificações acontece a todo momento na vida de um programador, mas como iremos enviar essas atualizações que estão na **nossa máquina** para o **github**? Vamos ao teste, modifique o arquivo **readme.md** e acrescente a seguinte frase: 
     * **"Estou alterando esse arquivo"** e não esqueça de **salvar**!
-    * Agora se você der um **git satus** vai perceber que o que o **estado** do repositório git agora é **modified**, já que você fez uma alteração e ainda não adicionou para **área de staging** e nem **commitou** para que o git possa receber essa alteração. E é justamente isso que você vai realizar após a **modificação no arquivo**:   
+    * Agora se você der um **git satus** vai perceber que o **estado** do repositório git agora é **modified**, já que você fez uma alteração e ainda não adicionou para **área de staging** e nem **commitou** para que o git possa receber essa alteração. E é justamente isso que você vai realizar após a **modificação no arquivo**:   
         * **_git add ._**
         * **_git commit -m "Acrescentei uma linha ao meu arquivo!"_** 
     * Agora o seu **repositório remoto** lá no **github** precisa receber isso, não é mesmo? e qual comando fazemos? **push!**
@@ -159,12 +159,12 @@ Repositório criado a fim de expor os conteúdos ministrados no minicurso de Int
     
 ### Atualizando seu repositório local
  * Continuando nosso trajeto em aprender como o git funciona, vamos entender agora como atualizar nosso repositório local com base em **objetos** e **referências** do repositório remoto, lá do **github**. Mas por quê? Bem, imagine que uma grande equipe está trabalhando no desenvolvimento de um software e você é um dos desenvolvedores responsáveis por certa parte do software. Acontece que alguns trabalhos dependem um dos outros e você precisa **receber** as aplicações dos seus outros colegas na sua máquina, mantendo a sua **branch** atualizada! 
- * O comando responsável por procurar por todos os **commits**, **arquivos** e **referências** de um **repositório remoto** para seu **repositório local**, possibilitando vizualizar a aplicação completa naquele instante e podendno analisar o **histórico** da produção, acompanhando como a equipe está progredindo e principalmente, manter a sua **branch** com funcionalidades desenvolvidades que podem ser requisito para o seu desenvolvimento, é o:
+ * O comando responsável por procurar por todos os **commits**, **arquivos** e **referências** de um **repositório remoto** que não estão no **repositório local**, possibilitando vizualizar a aplicação completa naquele instante e podendno analisar o **histórico** da produção, acompanhando como a equipe está progredindo e principalmente, manter a sua **branch** com funcionalidades desenvolvidades que podem ser requisito para o seu desenvolvimento, o comando é o:
    * **_git fetch_**
  
    ![Captura de tela de 2022-10-17 15-38-12](https://user-images.githubusercontent.com/64020657/196256359-750ede12-7f5c-4346-a67c-2683aa294bbc.png)
  
- * No entando, o comando apenas baixa o conteúdo do **repositório remoto**, mas não atualiza o estado de trabalho do seu **repositório local**, deixando seu trabalho atual intacto. Para **unir** o conteúdo do **repositório remoto** com o seu, é necessário utilizar o comando:
+ * No entando, o comando apenas busca o conteúdo do **repositório remoto**, mas não baixa e nem atualiza o estado de trabalho do seu **repositório local**, deixando seu trabalho atual intacto. Para **unir** o conteúdo do **repositório remoto** com o seu, é necessário utilizar o comando:
    * **_git pull_**
  * Ele irá executar um outro comando automaticamente, o **_git merge_**, mas não se preocupe que você vai aprender ainda sobre isso. Por enquanto, apenas absorva as definições de **git fetch** e **git pull**!
 
@@ -180,7 +180,7 @@ Repositório criado a fim de expor os conteúdos ministrados no minicurso de Int
      * Nesse caso, ele apenas cria a branch sem dar **checkout** nela, ou seja, sem mudar da **branch anterior** para a nova criada. Para mudar de ramo, use o comando: 
       * **git checkout >nome da branch<**
       
-    * A segunda, usando o comando:
+    * A segunda forma usa o comando:
      * **git checkout -b >nome da branch<**
      * Se você estiver na branch main, e criar a nova branch **formulário** com o checkout, automaticamente, você sai da branch **main** e muda para a branch **formulário**. Você pode verificar isso com o comando **_git status_** e poderá verificar a lista de branchs da sua árvore de trabalho, com o comando:
      * **_git branch_**
@@ -208,7 +208,7 @@ Repositório criado a fim de expor os conteúdos ministrados no minicurso de Int
  * Suponha que você acaba de receber um email de alguém avisando que há um problema no site que você está desenvolvendo. Como já aprendemos sobre **ramificações**, você não precisa adicionar a correção do problema junto à **branch** principal de desenvolvimento e, portanto, pode criar uma branch **independente** e **paralela**, que vamos chamar de **bugfix**. Assim sua árvore de trabalho, além de outras branchs ou não, terá com certeza um formato parecido com esse: 
     
     ![Captura de tela de 2022-10-17 22-40-33](https://user-images.githubusercontent.com/64020657/196315407-de09ca2b-80aa-4151-9ec5-432a042a6e1c.png)
- * A branch **bugfix** foi criada a partir da branch **main**, ou seja, você estava (**checkout**) na branch **main** quando criou a branch **bugfix**. Mas também há outros tipos de branchs, como a **hotfix** que é criada a partir de branchs de **procução**. Você pode entender melhor, acessando a documentação do [gitflow](https://www.atlassian.com/br/git/tutorials/comparing-workflows/gitflow-workflow). E vamos continuar!
+ * A branch **bugfix** foi criada a partir da branch **main**, ou seja, você estava (**checkout**) na branch **main** quando criou a branch **bugfix**. Mas também há outros tipos de branchs, como a **hotfix** que é criada a partir de branchs de **desenvolvimento**. Você pode entender melhor, acessando a documentação do [gitflow](https://www.atlassian.com/br/git/tutorials/comparing-workflows/gitflow-workflow). E vamos continuar!
       * Após criar a branch **bugfix**, você programou e programou e, finalmente, corrigiu o erro no site e agora? Agora, você já pode _enviar_ essa correção à linha **principal**, ou seja, para a branch **main**. E para fazermos isso, você vai voltar para a branch **main**, ou seja, dando **checkout** nela e vai executar o famoso **git merge** na branch **bugfix**. Desse jeitinho:
         * **_git checkout -b bugfix_** = aqui você criou a branch para correção do erro, a partir da branch main pois era nela que você estava
           * Após realizar os commits com a correção, você finaliza sua função e precisa voltar para branch **main**     
@@ -217,7 +217,7 @@ Repositório criado a fim de expor os conteúdos ministrados no minicurso de Int
               * **_git merge bugfix_**
       
  #### Resolvendo conflitos 
-  * Nem sempre quando se da **merge** entre branchs ocorre sem nenhum problema, e acostume-se com isso! Se houveram duas alterações na mesma parte de um arquivo em **branchs diferentes** e você tentar unir essas duas branchs, o **não** poderá mesclá-las. Isso porque, é como se ele tivesse ficado **"confuso"** já que você adicionou uma linha exatamente igual que o seu colega e no mesmo arquivo. Qual ele deve inserir na main? Qual a linha de código **"certa"?**. Para entender melhor, vamos praticar?
+  * Nem sempre quando se da **merge** entre branchs ocorre sem nenhum problema, e acostume-se com isso! Se houverem duas alterações na mesma parte de um arquivo em **branchs diferentes** e você tentar unir essas duas branchs, o git **não** poderá mesclá-las. Isso porque, é como se ele tivesse ficado **"confuso"** já que você adicionou uma linha exatamente igual que o seu colega e no mesmo arquivo. Qual ele deve inserir na main? Qual a linha de código **"certa"?**. Para entender melhor, vamos praticar?
    * Na branch **main**, crie um arquivo **index.html** e crie um código html com um título h1: **"Aprendendo GIT"** (não esqueça de commitar e empurrar para o repositório remoto). Dessa forma:    
     ![Captura de tela de 2022-10-18 00-00-31](https://user-images.githubusercontent.com/64020657/196325618-24eba59d-e519-4c3b-b65e-f44290fec6ab.png)
    * Seu terminal pode está assim:    
